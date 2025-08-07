@@ -4,9 +4,12 @@
 
 - **Novice Rank** - Variables, conditionals, loops
 
-### Not Yet Started
+### In Progress
 
 - **Apprentice** - Arrays, pointers, functions, recursion
+
+### Not Yet Started
+
 - **Adept** - Trees, heaps, hash tables
 - **Expert** - Graph, tries, search/sort algorithms
 - **Master** - Self-balancing trees, DSU, segment trees
