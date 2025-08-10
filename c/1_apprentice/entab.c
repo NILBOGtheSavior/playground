@@ -30,39 +30,18 @@ void entab() {
 	int i = 0;
 	int b, e;
 
+	int seq = 0;
+	
 	while ((c = getchar()) != EOF && i < MAXLINE - 1) {
-		if (c == ' ') {
-			if (!inspace) {
-				b = i;
-				inspace = true;
+		if (c == ' '){
+			if (inspace) {
+				seq++;
 			}
 		} else {
 			if (inspace) {
-				e = i;
 				inspace = false;
-				int spaces;
-				if (e - b >= TABLEN) {
-					int tabs = b % e;
-					spaces = b - (b % e);
-					while (tabs > 0) {
-						o[i] = '\t';
-						i++;
-						tabs--;
-					}
-					
-				} else {
-					spaces = e - b;
-				}
-				while (spaces > 0) {
-					o[i] = ' ';
-					i++;
-					spaces--;
-				}
-				b = e = 0;
 			}
-			o[i] = c;
 		}
-		i++;
 	}
 	printf("%s\n", o);
 
